@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GENTFILM — Contact</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="accueil.html" class="site-logo">GENTFILM</a>
+  <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav class="fullscreen-nav" id="fullscreenNav">
+  <a href="accueil.html" class="nav-link">Accueil</a>
+  <a href="photo.html" class="nav-link">Photo</a>
+  <a href="video.html" class="nav-link">Vidéo</a>
+  <a href="contact.html" class="nav-link">Contact</a>
+</nav>
+
+<section class="page-title">
+  <h1>Contact</h1>
+</section>
+
+<section class="contact-section">
+  <p class="contact-intro">Un projet, une envie, une question&nbsp;? Écrivez, GENTFILM vous répond avec plaisir.</p>
+
+  <form class="contact-form" id="contactForm">
+    <input type="text" name="nom" placeholder="Votre nom" required>
+    <input type="email" name="email" placeholder="Votre email" required>
+    <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+    <button type="submit" class="contact-submit">Envoyer</button>
+  </form>
+
+  <div class="contact-direct">
+    <a href="mailto:contact@gentfilm.com" class="contact-link">contact@gentfilm.com</a>
+    <a href="https://instagram.com" target="_blank" class="contact-link">@gentfilm</a>
+    <a href="https://wa.me/41791234567" target="_blank" class="contact-link">WhatsApp — +41 79 123 45 67</a>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

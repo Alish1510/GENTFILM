@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GENTFILM — Vidéo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="accueil.html" class="site-logo">GENTFILM</a>
+  <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav class="fullscreen-nav" id="fullscreenNav">
+  <a href="accueil.html" class="nav-link">Accueil</a>
+  <a href="photo.html" class="nav-link">Photo</a>
+  <a href="video.html" class="nav-link">Vidéo</a>
+  <a href="contact.html" class="nav-link">Contact</a>
+</nav>
+
+<section class="page-title">
+  <h1>Vidéo</h1>
+</section>
+
+<section class="video-list">
+
+  <div class="video-card" data-video="videos/videoplayback.mp4">
+    <img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/131ccf61-cbe7-5ed9-830e-7ae396b0f635/cd83ef72-e6f6-5bce-94c8-099eab1e5459.jpg" alt="Film de mariage 1" class="video-thumb">
+    <div class="play-icon">&#9658;</div>
+    <p class="video-caption">Un jour, une histoire</p>
+  </div>
+
+  <div class="video-card" data-video="videos/videoplayback.mp4">
+    <img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/8ddecc9e-06e9-56c8-b2b2-011c365b1856/81d2302e-10f7-52e1-99d8-8eaf171da08d.jpg" alt="Film de mariage 2" class="video-thumb">
+    <div class="play-icon">&#9658;</div>
+    <p class="video-caption">Instants suspendus</p>
+  </div>
+
+</section>
+
+<div class="video-modal" id="videoModal">
+  <span class="lightbox-close" id="videoModalClose">&times;</span>
+  <video id="videoPlayer" controls></video>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
