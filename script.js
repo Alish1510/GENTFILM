@@ -43,6 +43,16 @@ if (lightbox && galleryItems.length) {
   });
 }
 
+// Forcer l'affichage d'une image fixe (vignette) sur les <video> des cartes
+document.querySelectorAll('.video-thumb').forEach(vid => {
+  vid.addEventListener('loadedmetadata', () => {
+    vid.currentTime = 0.5;
+  });
+  vid.addEventListener('seeked', () => {
+    vid.pause();
+  }, { once: true });
+});
+
 const videoModal = document.getElementById('videoModal');
 const videoPlayer = document.getElementById('videoPlayer');
 const videoModalClose = document.getElementById('videoModalClose');
