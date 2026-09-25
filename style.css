@@ -14,7 +14,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   overflow-x: hidden;
 }
@@ -30,7 +31,7 @@ body.nav-open {
   height: 100vh;
 }
 
-/* ===== Page d'entrée (index.html) ===== */
+/* ===== Page d'entrée ===== */
 .entry-body {
   height: 100dvh;
   overflow: hidden;
@@ -100,12 +101,7 @@ body.nav-open {
   color: var(--noir);
 }
 
-@media (min-width: 768px) {
-  .entry-tagline { font-size: 2.1rem; max-width: 500px; }
-  .entry-btn { font-size: 0.9rem; padding: 1rem 3.2rem; }
-}
-
-/* ===== Redirection (menu flouté) ===== */
+/* ===== Redirection ===== */
 .landing-body {
   height: 100dvh;
   max-height: 100dvh;
@@ -195,13 +191,7 @@ body.nav-open {
   left: 0;
 }
 
-@media (min-width: 768px) {
-  .landing-logo { font-size: 2.8rem; }
-  .landing-menu { gap: 2rem; }
-  .landing-link { font-size: 0.85rem; }
-}
-
-/* ===== Header (pages internes) ===== */
+/* ===== Header ===== */
 .site-header {
   position: fixed;
   top: 0;
@@ -253,9 +243,11 @@ body.nav-open {
   top: 9px;
   transform: rotate(45deg);
 }
+
 .burger.active span:nth-child(2) {
   opacity: 0;
 }
+
 .burger.active span:nth-child(3) {
   top: 9px;
   transform: rotate(-45deg);
@@ -302,7 +294,7 @@ body.nav-open {
   letter-spacing: 0.4em;
 }
 
-/* ===== Hero (accueil) ===== */
+/* ===== Hero ===== */
 .hero {
   position: relative;
   width: 100%;
@@ -340,7 +332,7 @@ body.nav-open {
   color: var(--blanc-casse);
 }
 
-/* ===== Intro (accueil) ===== */
+/* ===== Intro ===== */
 .intro {
   padding: 3.5rem 1.5rem;
   max-width: 640px;
@@ -356,7 +348,7 @@ body.nav-open {
   color: rgba(242, 239, 233, 0.85);
 }
 
-/* ===== Titre de page (Photo, Vidéo, Contact) ===== */
+/* ===== Titres ===== */
 .page-title {
   padding: 7rem 1.5rem 2rem;
   text-align: center;
@@ -404,7 +396,7 @@ body.nav-open {
   filter: grayscale(0%);
 }
 
-/* ===== Lightbox (photo) ===== */
+/* ===== Lightbox ===== */
 .lightbox {
   position: fixed;
   inset: 0;
@@ -441,7 +433,7 @@ body.nav-open {
   z-index: 310;
 }
 
-/* ===== Vidéo — message en préparation ===== */
+/* ===== Vidéo ===== */
 .video-soon {
   max-width: 480px;
   margin: 0 auto;
@@ -540,11 +532,7 @@ body.nav-open {
   border-radius: 50%;
   color: rgba(242, 239, 233, 0.88);
   text-decoration: none;
-  transition:
-    color 0.3s ease,
-    background-color 0.3s ease,
-    border-color 0.3s ease,
-    transform 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
 }
 
 .contact-row:hover,
@@ -581,6 +569,154 @@ body.nav-open {
   border: 0;
 }
 
+/* ===== Tablette ===== */
+@media (min-width: 600px) {
+  .site-header {
+    padding: 1.5rem 3rem;
+  }
+
+  .page-title {
+    padding-top: 8rem;
+  }
+
+  .contact-section,
+  .video-soon {
+    max-width: 620px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    padding: 0 2.5rem 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .gallery-item {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+  }
+
+  .intro {
+    max-width: 720px;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+/* ===== Ordinateur ===== */
+@media (min-width: 900px) {
+  .site-header {
+    padding: 1.6rem 4rem;
+  }
+
+  .site-logo {
+    font-size: 1.6rem;
+  }
+
+  .burger {
+    width: 32px;
+    height: 22px;
+  }
+
+  .burger span:nth-child(2) { top: 10px; }
+  .burger span:nth-child(3) { top: 20px; }
+
+  .burger.active span:nth-child(1),
+  .burger.active span:nth-child(3) {
+    top: 10px;
+  }
+
+  .page-title {
+    padding-top: 10rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .page-title h1 {
+    font-size: 3.2rem;
+  }
+
+  .page-subtitle {
+    max-width: 620px;
+    font-size: 1.05rem;
+  }
+
+  .hero-text {
+    bottom: 5rem;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(2.8rem, 5vw, 5rem);
+  }
+
+  .intro {
+    max-width: 800px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .intro p {
+    font-size: 1.15rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .gallery-item {
+    height: 460px;
+  }
+
+  .contact-section {
+    max-width: 680px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1.05rem;
+  }
+
+  .contact-direct {
+    gap: 1.6rem;
+  }
+
+  .contact-row {
+    width: 104px;
+    height: 104px;
+  }
+
+  .contact-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .video-soon {
+    max-width: 680px;
+    padding-top: 2rem;
+  }
+
+  .video-soon-text {
+    font-size: 1.15rem;
+  }
+}
+
+/* ===== Très grands écrans ===== */
+@media (min-width: 1400px) {
+  .gallery {
+    max-width: 1500px;
+  }
+
+  .gallery-item {
+    height: 520px;
+  }
+}
+
 @media (max-width: 360px) {
   .contact-direct {
     gap: 0.7rem;
@@ -596,19 +732,3 @@ body.nav-open {
     height: 36px;
   }
 }
-
-@media (min-width: 768px) {
-  .hero-text h1 { font-size: 3.2rem; }
-  .intro p { font-size: 1.1rem; }
-  .site-logo { font-size: 1.5rem; }
-  .page-title h1 { font-size: 2.6rem; }
-  .page-subtitle { font-size: 1rem; }
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.8rem;
-    padding: 0 1.5rem 4rem;
-  }
-  .contact-text { font-size: 0.9rem; }
-  .video-soon-text { font-size: 1.1rem; }
-}
-
